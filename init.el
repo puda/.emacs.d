@@ -16,6 +16,7 @@
 (require 'puda-ui)
 (require 'puda-functions)
 (require 'puda-packages)
+(require 'puda-misc-keybindings)
 
 (puda-turn-off-mouse)
 

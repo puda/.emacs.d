@@ -28,6 +28,9 @@
 (smartparens-global-mode t)
 (show-paren-mode t) ;; show matching parenthesis
 
+;; set fonts
+(setq default-frame-alist '((font . "Source Code Pro for Powerline-14:weight=normal:width=medium:powerline-scale=1.1")))
+(set-frame-font "Source Code Pro for Powerline-14:weight=normal:width=medium:powerline-scale=1.1")
 
 ;comment bottom lines if on mac
 ;; (setq x-select-enable-clipboard t) ; copy to system clipboard

@@ -19,9 +19,6 @@
                     ;; (load-theme 'airline-kalisi t)
                     )))
 
-    (setq default-frame-alist '((font . "Source Code Pro for Powerline-14:weight=normal:width=medium:powerline-scale=1.1")))
-    (set-frame-font "Source Code Pro for Powerline-14:weight=normal:width=medium:powerline-scale=1.1")
-
     ;; terminal
     (set-terminal-coding-system 'utf-8)
     (set-keyboard-coding-system 'utf-8)

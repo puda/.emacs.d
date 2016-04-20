@@ -85,6 +85,16 @@ The return value is the new value of LIST-VAR."
       (set list-var elements)))
   (symbol-value list-var))
 
+(defun puda-paste-above ()
+  (interactive)
+  (evil-insert-newline-above)
+  (evil-paste-after 1))
+
+(defun puda-paste-below ()
+  (interactive)
+  (evil-insert-newline-below)
+  (evil-paste-after 1))
+
 (global-set-key [remap move-beginning-of-line]
                 'puda-move-beginning-of-line)
 
