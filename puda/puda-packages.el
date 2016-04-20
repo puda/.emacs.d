@@ -496,6 +496,7 @@
       "b" 'helm-mini
       "k" 'kill-this-buffer
       "e" 'helm-find-files
+      "E" 'sudo-edit
       "w" 'save-buffer
       "d" 'deer ;;zp to switch to ranger
       "v" 'er/expand-region
@@ -857,14 +858,9 @@ want to use in the modeline *in lieu of* the original.")
         (force-mode-line-update)))
     ))
 
-;;;;;;;;;;;;;;;;;;;;;;;;keybindings;;;;;;;;;;;;;;;;;;;;;
-(global-set-key (kbd "C-v") 'yank) ; paste
-(global-set-key (kbd "C-z") 'undo) ; undo
-(global-set-key (kbd "C-x m") 'eshell) ; terminal
-(global-set-key (kbd "C-h") 'backward-delete-char-untabify)
-(global-set-key (kbd "<C-return>") 'puda-add-semi-colon)
-(global-set-key (kbd "<C-S-return>") 'puda-move-cursor-above)
-
+(use-package sudo-edit
+  :ensure t
+  )
 
 (provide 'puda-packages)
 ;;; puda-packages.el ends here

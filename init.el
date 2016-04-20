@@ -18,6 +18,7 @@
 (require 'puda-packages)
 (require 'puda-misc-keybindings)
 
+
 (puda-turn-off-mouse)
 
 ;;; init.el ends here
