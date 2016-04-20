@@ -3,7 +3,6 @@
 ;;; All the packages in one place loaded using use-package
 ;;; Code:
 
-;; make helm ff fuzzy
 (use-package monokai-theme
   :ensure t
   :config
