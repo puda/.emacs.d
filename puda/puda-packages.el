@@ -114,6 +114,8 @@
     (global-set-key (kbd "C-x o") 'other-window)
     ;; for helm completion
     (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
+    (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action)
+    (define-key helm-map (kbd "C-z")  'helm-select-action)
     (global-set-key (kbd "C-c h i") 'helm-imenu) ; helm search for string in project
     ;; helm fuzzy matchings
     (setq helm-M-x-fuzzy-match t
