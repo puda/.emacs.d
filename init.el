@@ -17,7 +17,7 @@
 (require 'puda-functions)
 (require 'puda-packages)
 (require 'puda-misc-keybindings)
-(require 'puda-exwm)
+;; (require 'puda-exwm)
 
 (puda-turn-off-mouse)
 
