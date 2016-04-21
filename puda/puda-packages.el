@@ -359,6 +359,7 @@
       (evil-leader/set-key-for-mode 'php-mode "." 'ggtags-find-definition)
       (evil-leader/set-key-for-mode 'php-mode ">" 'ggtags-prev-mark)
       (evil-leader/set-key-for-mode 'php-mode "rt" 'puda-drupal-gtags-create) ;;recreate tags
+      (define-key evil-normal-state-map "M-]" 'ggtags-find-reference)
       (company-mode t)
       (add-to-list 'company-backends '(company-dabbrev-code company-gtags company-dabbrev))))
 
