@@ -16,7 +16,6 @@
                     (if (window-system frame)
                         (load-theme 'monokai t)
                       (load-theme 'monokai t))
-                    ;; (load-theme 'airline-kalisi t)
                     )))
 
     ;; terminal
@@ -85,7 +84,7 @@
   :config
   (progn
     (global-pretty-mode t)
-    (global-prettify-symbols-mode t) ;; is there extra package for this?
+    (global-prettify-symbols-mode t)
     ))
 
 (use-package helm
