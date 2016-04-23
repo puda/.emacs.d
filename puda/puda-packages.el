@@ -358,7 +358,7 @@
       (evil-leader/set-key-for-mode 'php-mode "." 'ggtags-find-definition)
       (evil-leader/set-key-for-mode 'php-mode ">" 'ggtags-prev-mark)
       (evil-leader/set-key-for-mode 'php-mode "rt" 'puda-drupal-gtags-create) ;;recreate tags
-      (define-key evil-normal-state-map "M-]" 'ggtags-find-reference)
+      (define-key evil-normal-state-map (kbd "M-]") 'ggtags-find-reference)
       (company-mode t)
       (add-to-list 'company-backends '(company-dabbrev-code company-gtags company-dabbrev))))
 
@@ -627,7 +627,7 @@
   :config
   (progn
     (setq-default evil-escape-key-sequence "fd")
-    (setq-default evil-escape-unordered-key-sequence t)
+    ;; (setq-default evil-escape-unordered-key-sequence t)
     (evil-escape-mode t)))
 
 (use-package evil-snipe
