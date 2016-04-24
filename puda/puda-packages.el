@@ -628,7 +628,8 @@
   (progn
     (setq-default evil-escape-key-sequence "fd")
     ;; (setq-default evil-escape-unordered-key-sequence t)
-    (evil-escape-mode t)))
+    (evil-escape-mode t)
+    (push 'term-mode evil-escape-excluded-major-modes)))
 
 (use-package evil-snipe
   :ensure t
