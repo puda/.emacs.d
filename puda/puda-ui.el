@@ -69,6 +69,10 @@
 (fullframe magit-status magit-mode-quit-window)
 (fullframe magit-revision magit-mode-quit-window)
 
+;; transparency
+(push '(alpha . (0.94 . 0.94)) default-frame-alist)
+(set-frame-parameter (selected-frame) 'alpha '(0.94 . 0.94))
+
 (setq default-directory "/var/www/community/" )
 (setq initial-scratch-message ";; Puda loves Rachael!! \n;; Puda Emacs Config!!")
 
