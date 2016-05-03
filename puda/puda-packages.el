@@ -23,23 +23,37 @@
     (set-keyboard-coding-system 'utf-8)
     (prefer-coding-system 'utf-8)))
 
-(use-package airline-themes
+(use-package spaceline
   :ensure t
   :init
   (progn
-    (setq airline-utf-glyph-separator-left      #xe0b0
-          airline-utf-glyph-separator-right     #xe0b2
-          airline-utf-glyph-subseparator-left   #xe0b1
-          airline-utf-glyph-subseparator-right  #xe0b3
-          airline-utf-glyph-branch              #xe0a0
-          airline-utf-glyph-readonly            #xe0a2
-          airline-utf-glyph-linenumber          #xe0a1)
-    (setq powerline-default-separator 'arrow
-          powerline-display-hud nil
-          ))
+    (setq
+     ;; cursor
+     evil-insert-state-cursor '((bar . 5) "green")
+     evil-normal-state-cursor '(box "orange")
+     evil-motion-state-cursor '(box "orange")
+     evil-visual-state-cursor '((hbar . 5) "grey")
+     evil-emacs-state-cursor '(box "royal blue")
+     ;; spaceline
+     spaceline-workspace-numbers-unicode t
+     spaceline-window-numbers-unicode t
+     spaceline-highlight-face-func 'spaceline-highlight-face-evil-state
+     spaceline-flycheck-error-p nil
+     spaceline-flycheck-info-p nil
+     spaceline-flycheck-warning-p nil
+     )
+    )
   :config
   (progn
-    (load-theme 'airline-molokai t)))
+    (require 'spaceline-config)
+    (spaceline-spacemacs-theme)
+    )
+  )
+
+(use-package window-numbering
+  :ensure t
+  :config
+  (progn (window-numbering-mode t)))
 
 (use-package golden-ratio
   :ensure t
@@ -67,7 +81,8 @@
                                                    evil-window-left
                                                    evil-window-right
                                                    evil-window-up))
-    (golden-ratio-mode t)))
+    ;; (golden-ratio-mode t)
+    ))
 
 (use-package linum-relative
   :ensure t
@@ -335,8 +350,8 @@
             (lambda nil
               (ansi-term shell-pop-term-shell)))))
     (setq shell-pop-term-shell "/bin/zsh"
-          shell-pop-window-position "right"
-          shell-pop-window-size 50)
+          shell-pop-window-position "bottom"
+          shell-pop-window-size 70)
     )
   :config
   (progn
@@ -529,6 +544,7 @@
       "jj" 'evil-avy-goto-char
       "jl" 'evil-avy-goto-line
       "jw" 'evil-avy-goto-word-1
+      "j;" 'avy-isearch
       ;; helm
       "hs" 'helm-swoop-without-pre-input
       "hS" 'helm-swoop
@@ -668,6 +684,7 @@
   :ensure t
   :config
   (progn
+    (setq diff-hl-side 'right)
     (global-diff-hl-mode t)
     ))
 
