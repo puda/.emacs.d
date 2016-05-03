@@ -61,13 +61,13 @@
   (progn
     (setq
      golden-ratio-exclude-modes '("ediff-mode"
-                                       "eshell-mode"
-                                       "helm-mini"
-                                       "guide-key-mode"
-                                       "undo-tree-visualizer-mode"
-                                       "diff-mode"
-                                       "dired-mode"
-                                       )
+                                  "eshell-mode"
+                                  "helm-mini"
+                                  "guide-key-mode"
+                                  "undo-tree-visualizer-mode"
+                                  "diff-mode"
+                                  "dired-mode"
+                                  )
      split-width-threshold nil))
   :config
   (progn
@@ -370,12 +370,12 @@
       (let ((inhibit-message t) (default-directory "/var/www/community/"))
         (shell-command "gtags --gtagslabel drupal")))
 
-      (evil-leader/set-key-for-mode 'php-mode "." 'ggtags-find-definition)
-      (evil-leader/set-key-for-mode 'php-mode ">" 'ggtags-prev-mark)
-      (evil-leader/set-key-for-mode 'php-mode "rt" 'puda-drupal-gtags-create) ;;recreate tags
-      (define-key evil-normal-state-map (kbd "M-]") 'ggtags-find-reference)
-      (company-mode t)
-      (add-to-list 'company-backends '(company-dabbrev-code company-gtags company-dabbrev))))
+    (evil-leader/set-key-for-mode 'php-mode "." 'ggtags-find-definition)
+    (evil-leader/set-key-for-mode 'php-mode ">" 'ggtags-prev-mark)
+    (evil-leader/set-key-for-mode 'php-mode "rt" 'puda-drupal-gtags-create) ;;recreate tags
+    (define-key evil-normal-state-map (kbd "M-]") 'ggtags-find-reference)
+    (company-mode t)
+    (add-to-list 'company-backends '(company-dabbrev-code company-gtags company-dabbrev))))
 
 (use-package php-auto-yasnippets
   :ensure t
@@ -461,11 +461,6 @@
     (add-hook 'company-completion-started-hook 'company-turn-off-fci)
     (add-hook 'company-completion-finished-hook 'company-maybe-turn-on-fci)
     (add-hook 'company-completion-cancelled-hook 'company-maybe-turn-on-fci)
-    (custom-set-faces
-     '(company-tooltip-common
-       ((t (:inherit company-tooltip :weight bold :underline nil))))
-     '(company-tooltip-common-selection
-       ((t (:inherit company-tooltip-selection :weight bold :underline nil)))))
     ;; hippie expand configure
     (setq hippie-expand-try-functions-list
           '(
@@ -541,19 +536,20 @@
       ;; M-x
       "<SPC>" 'helm-M-x
       ;; jumps
+      "ji" 'helm-imenu
+      "jI" 'helm-imenu-in-all-buffers
       "jj" 'evil-avy-goto-char
       "jl" 'evil-avy-goto-line
       "jw" 'evil-avy-goto-word-1
       "j;" 'avy-isearch
       ;; helm
-      "hs" 'helm-swoop-without-pre-input
-      "hS" 'helm-swoop
-      "hi" 'helm-imenu
-      "hI" 'helm-imenu-in-all-buffers
       "he" 'helm-recentf
       "hc" 'helm-colors
       "hpg" 'helm-projectile-grep
       "hpa" 'helm-do-grep-ag
+      ;; search
+      "ss" 'helm-swoop-without-pre-input
+      "sS" 'helm-swoop
       ;; describe
       "hdk" 'describe-key
       "hdv" 'describe-variable
@@ -658,7 +654,7 @@
   :config
   (progn
     (evil-snipe-override-mode t)
-  ))
+    ))
 
 (use-package evil-mc
   :ensure t
