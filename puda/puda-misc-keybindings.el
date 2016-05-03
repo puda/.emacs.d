@@ -40,6 +40,7 @@
 (global-set-key (kbd "C-h") 'backward-delete-char-untabify)
 (global-set-key (kbd "<C-return>") 'puda-add-semi-colon)
 (global-set-key (kbd "<C-S-return>") 'puda-move-cursor-above)
-
+;;;; helm transient
+(define-key helm-map (kbd "M-SPC") 'helm-like-unite/body)
 (provide 'puda-misc-keybindings)
 ;;; puda-misc-keybindings.el ends here

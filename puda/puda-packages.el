@@ -693,7 +693,8 @@
     (key-chord-define evil-motion-state-map "fk" 'vertigo-jump-up)
     (key-chord-define evil-motion-state-map "fj" 'vertigo-jump-down)
     ;; using hydra for evil keybindings in minibuffer
-    (key-chord-define minibuffer-local-map "jk" 'helm-like-unite/body)))
+    ;; (key-chord-define minibuffer-local-map "jk" 'helm-like-unite/body)
+    ))
 
 (use-package evil-args
   :ensure t
