@@ -509,6 +509,10 @@
       "bb" 'helm-mini
       "bk" 'kill-this-buffer
       "bd" 'kill-buffer
+      "bmh" 'buf-move-left
+      "bml" 'buf-move-right
+      "bmk" 'buf-move-up
+      "bmj" 'buf-move-down
       "ry" 'helm-show-kill-ring
       ;; "b." 'puda-buffer-mode/body
       "ff" 'helm-find-files
