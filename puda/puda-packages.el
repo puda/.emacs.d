@@ -50,10 +50,11 @@
     )
   )
 
-(use-package window-numbering
+;; just for spaceline
+(use-package eyebrowse
   :ensure t
   :config
-  (progn (window-numbering-mode t)))
+  (progn (eyebrowse-mode t)))
 
 (use-package golden-ratio
   :ensure t
