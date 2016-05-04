@@ -120,8 +120,6 @@
  ;; Other
  '(company-tooltip-annotation ((t (:foreground "#ff9eb8"))))
  '(company-tooltip-annotation-selection ((t (:background "#66d9ef"))))
- '(erc-timestamp-face
-   ((t (:inherit font-lock-comment-face :foreground nil))))
  '(evil-search-highlight-persist-highlight-face
    ((t (:background "#fc5fef" :foreground "#000000"))))
  '(helm-ff-prefix ((t (:background nil :foreground "#666666" :weight bold))))
