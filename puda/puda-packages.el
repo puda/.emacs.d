@@ -674,9 +674,7 @@
   :ensure t
   :config
   (progn
-    (evil-magit-init)
-    ;; go to insert mode when commiting
-    (add-hook 'with-editor-mode-hook 'evil-insert-state)))
+    (evil-magit-init)))
 
 (use-package diff-hl
   :ensure t
