@@ -502,40 +502,25 @@
     ;; Evil Leader
     (evil-leader/set-leader "SPC")
     (evil-leader/set-key
-      ;; registries
-      "u" 'undo-tree-visualize
-      "q" 'helm-show-kill-ring
-      ;; file actions
-      "b" 'helm-mini
-      "k" 'kill-this-buffer
-      "e" 'helm-find-files
-      "E" 'sudo-edit
-      "w" 'save-buffer
-      "d" 'deer ;;zp to switch to ranger
-      "v" 'er/expand-region
-      ";" 'evil-commentary
-      ;; window navigation
-      "o" 'other-window
-      "O" 'ace-window
-      "C-o" 'ace-swap-window
-      "1" 'delete-other-windows
-      "2" 'split-window-below
-      "3" 'split-window-right
-      "0" 'delete-window
-      ;; macro
-      "(" 'kmacro-start-macro
-      ")" 'kmacro-end-or-call-macro
-      ;; evil window navigation
-      "<tab>" 'evil-switch-to-windows-last-buffer
-      "H" 'evil-window-left
-      "L" 'evil-window-right
-      "J" 'evil-window-down
-      "K" 'evil-window-up
-      ;; dumb-jump to go to definitions
-      "." 'dumb-jump-go
-      ">" 'dumb-jump-back
-      ;; M-x
-      "<SPC>" 'helm-M-x
+      ;; spacemacs keybindings
+      "ad" 'deer
+      "ar" 'ranger
+      "au" 'undo-tree-visualize
+      "bb" 'helm-mini
+      "bk" 'kill-this-buffer
+      "bd" 'kill-buffer
+      "ry" 'helm-show-kill-ring
+      ;; "b." 'puda-buffer-mode/body
+      "ff" 'helm-find-files
+      "fr" 'helm-recentf
+      "fs" 'save-buffer
+      "fF" 'sudo-edit
+      ;;magit
+      "gs" 'magit-status
+      ;; describe
+      "hdk" 'describe-key
+      "hdv" 'describe-variable
+      "hdf" 'describe-function
       ;; jumps
       "ji" 'helm-imenu
       "jI" 'helm-imenu-in-all-buffers
@@ -543,34 +528,53 @@
       "jl" 'evil-avy-goto-line
       "jw" 'evil-avy-goto-word-1
       "j;" 'avy-isearch
-      ;; helm
-      "he" 'helm-recentf
-      "hc" 'helm-colors
-      "hpg" 'helm-projectile-grep
-      "hpa" 'helm-do-grep-ag
+      "pf" 'helm-projectile
+      "pe" 'helm-projectile-recentf
+      "qq" 'save-buffers-kill-terminal
+      ;; "qR" 'puda-restart-emacs
       ;; search
       "ss" 'helm-swoop-without-pre-input
       "sS" 'helm-swoop
-      ;; describe
-      "hdk" 'describe-key
-      "hdv" 'describe-variable
-      "hdf" 'describe-function
-      "pf" 'helm-projectile
-      "pe" 'helm-projectile-recentf
-      "zz" 'save-buffers-kill-terminal
+      "spg" 'helm-projectile-grep
+      "spa" 'helm-projectile-ag
+      "v" 'er/expand-region
+      ;; window
+      "ww" 'other-window
+      "wl" 'evil-window-right
+      "wh" 'evil-window-left
+      "wj" 'evil-window-down
+      "wk" 'evil-window-up
+      "wm" 'delete-other-windows
+      "wd" 'delete-window
+      "ws" 'split-window-below
+      "wv" 'split-window-right
+      "w<SPC>" 'ace-window
+      "w<C-o>" 'ace-swap-window
+      ;; winner
+      "wu" 'winner-undo
+      "wU" 'winner-redo
+      ";" 'evil-commentary
+      "<tab>" 'evil-switch-to-windows-last-buffer
+      ;; dumb-jump to go to definitions
+      "." 'dumb-jump-go
+      ">" 'dumb-jump-back
+      ;; M-x
+      "<SPC>" 'helm-M-x
+      "'" 'shell-pop
+
+      ;; helm
+      "hc" 'helm-colors
       "tl" 'transpose-lines
       "tw" 'transpose-words
-      "'" 'shell-pop
       ;; f for hydra prefix hydra
-      "fB" 'puda-hydra-buffer-move/body
-      "fb" 'puda-hydra-buffer-actions/body
-      "fs" 'puda-hydra-scroll-page/body
+      ;; "fB" 'puda-hydra-buffer-move/body
+      ;; "fb" 'puda-hydra-buffer-actions/body
+      ;; "fs" 'puda-hydra-scroll-page/body
+
       ;; frame control
       "52" 'make-frame-command
       "50" 'delete-frame
       "5o" 'other-frame
-      ;;magit
-      "gs" 'magit-status
       ;; auto-yasnippet
       "ac" 'aya-create
       "ae" 'aya-expand
@@ -579,9 +583,6 @@
       ;; "/" 'ag
       "/" 'ag-project
       "*" 'ag-project-at-point
-      ;; winner
-      "[" 'winner-undo
-      "]" 'winner-redo
       )
     (global-evil-leader-mode t)))
 

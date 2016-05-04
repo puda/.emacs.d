@@ -26,7 +26,7 @@
 (recentf-mode 1)
 ;; (electric-pair-mode 1)
 (smartparens-global-mode t)
-(show-paren-mode t) ;; show matching parenthesis
+(show-paren-mode nil) ;; show matching parenthesis
 
 ;; set fonts
 (setq default-frame-alist '((font . "Source Code Pro-14:weight=normal:width=medium:powerline-scale=1.1")))
