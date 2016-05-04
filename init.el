@@ -13,10 +13,10 @@
 ;; load config files
 (add-to-list 'load-path "~/.emacs.d/puda")
 (require 'puda-packages-to-install)
-(require 'puda-ui)
 (require 'puda-functions)
 (require 'puda-packages)
 (require 'puda-misc-keybindings)
+(require 'puda-ui)
 (require 'puda-exwm)
 
 (puda-turn-off-mouse)

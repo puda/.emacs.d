@@ -32,7 +32,7 @@
 (setq default-frame-alist '((font . "Source Code Pro for Powerline-14:weight=normal:width=medium:powerline-scale=1.1")))
 (set-frame-font "Source Code Pro for Powerline-14:weight=normal:width=medium:powerline-scale=1.1")
 
-;comment bottom lines if on mac
+;; comment bottom lines if on mac
 ;; (setq x-select-enable-clipboard t) ; copy to system clipboard
 ;; (setq interprogram-paste-function 'x-cut-buffer-or-selection-value) ; paste from system clipboard
 
@@ -77,14 +77,58 @@
 (setq initial-scratch-message ";; Puda loves Rachael!! \n;; Puda Emacs Config!!")
 
 (custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
     ("9864c2e956c25b3098fbc935ba0969e333dd74ecd7a1013c8dd39a6c171e1cca" "d9a0d14596e3d0bdb81f052fa9b99741dcd239af402d42e35f80822e05557cb2" "8f0334c430540bf45dbcbc06184a2e8cb01145f0ae1027ce6b1c40876144c0c9" "cadc97db0173a0d0bfc40473cab4da462af0ba8d60befd0a4879b582bcbc092d" "0788bfa0a0d0471984de6d367bb2358c49b25e393344d2a531e779b6cec260c5" "fbcdb6b7890d0ec1708fa21ab08eb0cc16a8b7611bb6517b722eba3891dfc9dd" "b5fe3893c8808466711c1b55bb7e66b9c6aa2a86811783375a43e1beabb1af33" "e97dbbb2b1c42b8588e16523824bc0cb3a21b91eefd6502879cf5baa1fa32e10" "51277c9add74612c7624a276e1ee3c7d89b2f38b1609eed6759965f9d4254369" "badc4f9ae3ee82a5ca711f3fd48c3f49ebe20e6303bba1912d4e2d19dd60ec98" "8e7ca85479dab486e15e0119f2948ba7ffcaa0ef161b3facb8103fb06f93b428" "532769a638787d1196bc22c885e9b85269c3fc650fdecfc45135bb618127034c" "977513781c8dd86f4f0a04dbf518df5ba496da42b71173368b305478703eea42" "86a731bda96ed5ed69980b4cbafe45614ec3c288da3b773e4585101e7ece40d2" "70340909b0f7e75b91e66a02aa3ad61f3106071a1a4e717d5cdabd8087b47ec4" "133222702a3c75d16ea9c50743f66b987a7209fb8b964f2c0938a816a83379a0" "aab598c4d024d544b4e8b356a95ca693afa9de000b154bd2f86eed68c9e75557" default))
    ))
+
+(custom-set-faces
+ '(font-lock-comment-face ((t (:slant italic))))
+ '(font-lock-comment-face ((t (:slant italic))))
+ '(font-lock-string-face ((t (:slant italic))))
+ '(font-lock-doc-face ((t (:slant italic))))
+ '(font-lock-keyword-face ((t (:weight bold))))
+ '(font-lock-builtin-face ((t (:foreground "#ff9eb8" :weight semi-bold))))
+ '(font-lock-warning-face ((t (:underline nil))))
+ '(web-mode-html-attr-value-face
+   ((t (:inherit font-lock-string-face :foreground nil))))
+ '(web-mode-html-attr-name-face
+   ((t (:inherit font-lock-variable-name-face :foreground nil))))
+ '(web-mode-html-tag-face
+   ((t (:inherit font-lock-builtin-face :foreground nil :weight bold))))
+ '(web-mode-html-tag-bracket-face
+   ((t (:inherit web-mode-html-tag-face :foreground nil))))
+ '(web-mode-comment-face
+   ((t (:inherit font-lock-comment-face :foreground nil))))
+
+ ;; Modeline
+ '(header-line ((t (:box (:color "#555555" :line-width 1)))))
+ '(mode-line ((t (:box (:color "#999999" :line-width 1 :style released-button)))))
+ '(powerline-active1 ((t (:box (:color "#999999" :line-width 1 :style released-button))))
+                     ((t (:background "#5a5a5a"))))
+ '(powerline-active2 ((t (:box (:color "#999999" :line-width 1 :style released-button)))))
+ '(mode-line-inactive ((t (:box (:color "#666666" :line-width 1 :style released-button)))))
+ '(powerline-inactive1 ((t (:box (:color "#666666" :line-width 1 :style released-button)))))
+ '(powerline-inactive2 ((t (:box (:color "#666666" :line-width 1 :style released-button)))))
+ '(helm-prefarg ((t (:foreground "PaleGreen"))))
+
+ ;; Flycheck
+ '(flycheck-fringe-error ((t (:background nil))))
+ '(flycheck-fringe-warning ((t (:background nil))))
+ '(flycheck-fringe-info ((t (:background nil))))
+
+ ;; Other
+ '(company-tooltip-annotation ((t (:foreground "#ff9eb8"))))
+ '(company-tooltip-annotation-selection ((t (:background "#66d9ef"))))
+ '(erc-timestamp-face
+   ((t (:inherit font-lock-comment-face :foreground nil))))
+ '(evil-search-highlight-persist-highlight-face
+   ((t (:background "#fc5fef" :foreground "#000000"))))
+ '(helm-ff-prefix ((t (:background nil :foreground "#666666" :weight bold))))
+ '(org-done ((t (:foreground "MediumSpringGreen"))))
+ '(region ((t (:background "#998f84"))))
+ '(term ((t (:foreground nil :background nil))))
+ )
 
 (provide 'puda-ui)
 ;;; puda-ui ends here
