@@ -554,7 +554,7 @@
       "wv" 'split-window-right
       "w<SPC>" 'ace-window
       "w<C-o>" 'ace-swap-window
-      ;; winner
+      ;; "w." 'puda-window-mode
       "wu" 'winner-undo
       "wU" 'winner-redo
       ";" 'evil-commentary
