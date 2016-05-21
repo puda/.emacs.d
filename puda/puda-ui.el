@@ -29,8 +29,8 @@
 (show-paren-mode nil) ;; show matching parenthesis
 
 ;; set fonts
-(setq default-frame-alist '((font . "Source Code Pro-14:weight=normal:width=medium:powerline-scale=1.1")))
-(set-frame-font "Source Code Pro-14:weight=normal:width=medium:powerline-scale=1.1")
+(setq default-frame-alist '((font . "Source Code Pro-15:weight=normal:width=medium:powerline-scale=1.1")))
+(set-frame-font "Source Code Pro-15:weight=normal:width=medium:powerline-scale=1.1")
 
 ;; comment bottom lines if on mac
 ;; (setq x-select-enable-clipboard t) ; copy to system clipboard

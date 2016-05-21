@@ -85,11 +85,14 @@
     ;; (golden-ratio-mode t)
     ))
 
-(use-package linum-relative
+(use-package nlinum-relative
   :ensure t
   :config
   (progn
-    (linum-relative-global-mode 1)))
+    (global-nlinum-relative-mode t)))
+
+(use-package restart-emacs
+  :ensure t)
 
 (use-package auto-yasnippet
   :ensure t
@@ -247,7 +250,10 @@
   :config
   (progn
     (setq yas-prompt-functions '(yas-ido-prompt)) ;;for promt that uses C-n and C-p
-    (yas-global-mode t)))
+    (yas-global-mode t)
+    (setq yas-snippet-dirs (append yas-snippet-dirs
+                                   '("~/.emacs.d/puda/puda-snippets")))
+    ))
 
 (use-package undo-tree
   :ensure t
@@ -518,7 +524,7 @@
       "ff" 'helm-find-files
       "fr" 'helm-recentf
       "fs" 'save-buffer
-      "fF" 'sudo-edit
+      "fE" 'sudo-edit
       ;;magit
       "gs" 'magit-status
       ;; describe
@@ -535,6 +541,7 @@
       "pf" 'helm-projectile
       "pe" 'helm-projectile-recentf
       "qq" 'save-buffers-kill-terminal
+      "qR" 'restart-emacs
       ;; "qR" 'puda-restart-emacs
       ;; search
       "ss" 'helm-swoop-without-pre-input
@@ -769,8 +776,8 @@
     (eval-after-load "evil-anzu"
       '(diminish 'evil-anzu))
 
-    (eval-after-load "linum-relative"
-      '(diminish 'linum-relative-mode))
+    ;; (eval-after-load "nlinum-relative"
+    ;;   '(diminish 'nlinum-relative-mode))
 
     (eval-after-load "vim-empty-lines"
       '(diminish 'vim-empty-lines-mode))
@@ -834,7 +841,7 @@
         (anzu-mode . "")
         (evil-anzu . "")
         (vim-empty-lines-mode . "")
-        (linum-relative-mode . "")
+        ;; (nlinum-relative-mode . "")
         (helm-mode . "")
         ;; Major modes
         (lisp-interaction-mode . "λ")
