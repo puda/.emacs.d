@@ -250,9 +250,9 @@
   :config
   (progn
     (setq yas-prompt-functions '(yas-ido-prompt)) ;;for promt that uses C-n and C-p
-    (yas-global-mode t)
     (setq yas-snippet-dirs (append yas-snippet-dirs
                                    '("~/.emacs.d/puda/puda-snippets")))
+    (yas-global-mode t)
     ))
 
 (use-package undo-tree
