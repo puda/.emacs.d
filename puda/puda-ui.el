@@ -1,7 +1,5 @@
 ;; nice scrolling
-(setq scroll-margin 0
-      scroll-conservatively 10000
-      scroll-preserve-screen-position 1)
+(setq scroll-conservatively 101)
 ;; No splash screen
 (setq inhibit-startup-message t)
 ;; no scrollbars
